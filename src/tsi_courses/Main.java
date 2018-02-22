@@ -16,19 +16,15 @@ public class Main {
 
         int myNum = randome.nextInt(100) + 1;
 
-        for (int i = 1; i < 10;  i++) {
-            System.out.println("try number is: " + i );
+        for (int i = 10; i > 1;  i--) {
+            System.out.println( " your have " + i + " try " );
 
         int userNum = scanner.nextInt();
 
-        System.out.println(userNum);
-
-
-
         if (myNum < userNum) {
-            System.out.println("your num >, try next number");
+            System.out.println( "<"+ userNum + " , try next number");
         } else if (myNum > userNum) {
-            System.out.println("your num <, try next number");
+            System.out.println( userNum + "< , try next number");
         } else {
             System.out.println("your win");
             break ;
