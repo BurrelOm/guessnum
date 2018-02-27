@@ -12,32 +12,35 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("I think of number from 1 to 100. Try to guess it.");
-
         int myNum = randome.nextInt(100) + 1;
 
-        for (int i = 10; i > 1;  i--) {
-            System.out.println( " your have " + i + " try " );
+        String answer ;
 
-        int userNum = scanner.nextInt();
+        do {
 
-        if (myNum < userNum) {
-            System.out.println( "<"+ userNum + " , try next number");
-        } else if (myNum > userNum) {
-            System.out.println( userNum + "< , try next number");
-        } else {
-            System.out.println("your win");
-            break ;
-        }
+            System.out.println("I think of number X from 1 to 100. Try to guess X.");
+            for (int i = 10; i > 0; i--) {
+                System.out.println(" your have " + i + " try. Please enter your number: ");
+
+                int userNum = scanner.nextInt();
+
+                if (myNum < userNum) {
+                    System.out.println("X <" + userNum + " , try next number");
+                } else if (myNum > userNum) {
+                    System.out.println(userNum + "< X , try next number");
+                } else {
+                    System.out.println("your win");
+                    break;
+                }
+            }
+
+            System.out.println("The game is over ");
+
+            System.out.println("One more game? (yes/no) ");
+            answer = scanner.next();
+
+        } while (answer.equals("yes"));
 
 
+        }}
 
-        }
-
-
-
-
-
-
-    }
-}
