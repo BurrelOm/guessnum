@@ -34,7 +34,7 @@ public class Main {
                 }
             }
 
-            System.out.println("The game is over ");
+            System.out.println("The game is over! The number was " + myNum);
 
             System.out.println("One more game? (yes/no) ");
             answer = scanner.next();
